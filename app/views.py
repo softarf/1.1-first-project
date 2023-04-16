@@ -25,11 +25,13 @@ def home_view(request):
 
 def time_view(request):
     """Печатает текущее время."""
-    now_time = datetime.now()
-    hour = now_time.strftime('%H')
-    minute = now_time.strftime('%M')
-    second = now_time.strftime('%S')
-    msg = f'Текущее время: {hour}:{minute}:{second}'
+    # now_time = datetime.now()
+    # hour = now_time.strftime('%H')
+    # minute = now_time.strftime('%M')
+    # second = now_time.strftime('%S')
+    # msg = f'Текущее время: {hour}:{minute}:{second}'
+    #                                                         Сократил код.
+    msg = datetime.now().strftime('Текущее время: %H:%M:%S')
     return HttpResponse(msg)
 
 
